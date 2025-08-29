@@ -153,17 +153,60 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
   }
 
-  @media (max-width: 720px) {
-    .dz-preview {
-      width: 100%;
-      flex-direction: row;
-      height: 130px;
-    }
-    .dz-image img {
-      height: 100px;
-      width: 120px;
-    }
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
   }
+
+  .container {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .dropzone {
+    padding: 30px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* ubah preview jadi vertikal di mobile */
+  .dz-preview {
+    width: 100% !important;
+    flex-direction: column !important;
+    height: auto !important;
+    margin: 10px 0 !important;
+  }
+
+  .dz-image img {
+    width: 100% !important;
+    max-height: 200px !important;
+    object-fit: contain !important;
+  }
+
+  .caption-input {
+    width: 100% !important;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .custom-remove-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+
+  #generateBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+}
 </style>
 </head>
 <body>
@@ -282,4 +325,5 @@
     });
   </script>
 </body>
+
 </html>
